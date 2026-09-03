@@ -1,0 +1,23 @@
+{
+  "name": "tree-sitter-kalcite",
+  "version": "0.2.0",
+  "description": "Tree-sitter grammar for the Kalcite programming language",
+  "license": "MIT",
+  "repository": "https://github.com/Kalcite-Engine/tree-sitter-kalcite",
+  "main": "bindings/node",
+  "keywords": [
+    "tree-sitter",
+    "kalcite"
+  ],
+  "scripts": {
+    "generate": "tree-sitter generate",
+    "test": "tree-sitter test"
+  },
+  "dependencies": {
+    "node-addon-api": "^8.0.0",
+    "node-gyp-build": "^4.8.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.24.0"
+  }
+}

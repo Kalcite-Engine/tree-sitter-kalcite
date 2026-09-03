@@ -1,0 +1,30 @@
+{
+  "grammars": [
+    {
+      "name": "kalcite",
+      "camelcase": "Kalcite",
+      "scope": "source.kalcite",
+      "path": ".",
+      "file-types": [
+        "klc"
+      ],
+      "injection-regex": "^kalcite$"
+    }
+  ],
+  "metadata": {
+    "version": "0.2.0",
+    "license": "MIT",
+    "description": "Tree-sitter grammar for the Kalcite programming language",
+    "links": {
+      "repository": "https://github.com/Kalcite-Engine/tree-sitter-kalcite"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true
+  }
+}
