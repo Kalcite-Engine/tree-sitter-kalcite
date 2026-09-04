@@ -16,7 +16,14 @@ module.exports = grammar({
     field_declaration: $ => seq(optional($.attributes), choice('var', 'const'), $.identifier, ':', $._type, optional(seq('=', $._expression)), ';'),
     signal_declaration: $ => seq(optional($.attributes), 'signal', field('name', $.identifier), '(', optional(commaSep($.parameter)), ')', ';'),
     block: $ => seq('{', repeat(choice($._declaration, $.statement)), '}'),
-    statement: $ => choice($.native_statement, $.local_declaration, seq($._expression, ';'), $.block, seq('return', optional($._expression), ';')),
+    statement: $ => choice(
+      $.native_statement,
+      $.local_declaration,
+      seq($._expression, ';'),
+      $.block,
+      seq('defer', $._expression, ';'),
+      seq('return', optional($._expression), ';')
+    ),
     native_statement: $ => seq('unsafe', choice('rust', 'asm'), optional(seq('[', $.identifier, ']')), '{', optional($.native_body), '}'),
     native_body: _ => token(/[^}]+/),
     local_declaration: $ => choice(

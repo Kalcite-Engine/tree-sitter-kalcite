@@ -1,0 +1,24 @@
+==================
+defer cleanup
+==================
+
+class Settings {
+  fn save() {
+    defer close();
+    return;
+  }
+}
+
+---
+
+(source_file
+  (class_declaration
+    name: (identifier)
+    (block
+      (function_declaration
+        name: (identifier)
+        (block
+          (statement
+            (call
+              (identifier)))
+          (statement))))))

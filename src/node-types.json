@@ -526,6 +526,10 @@
     "named": false
   },
   {
+    "type": "defer",
+    "named": false
+  },
+  {
     "type": "extends",
     "named": false
   },
