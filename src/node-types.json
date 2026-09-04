@@ -274,6 +274,11 @@
     }
   },
   {
+    "type": "break_statement",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "call",
     "named": true,
     "fields": {
@@ -868,6 +873,10 @@
           "named": true
         },
         {
+          "type": "break_statement",
+          "named": true
+        },
+        {
           "type": "call",
           "named": true
         },
@@ -1186,6 +1195,10 @@
   },
   {
     "type": "asm",
+    "named": false
+  },
+  {
+    "type": "break",
     "named": false
   },
   {
