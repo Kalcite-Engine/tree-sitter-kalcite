@@ -10,6 +10,7 @@ class Player {
       while speed > 0 {
         defer Audio.stop();
         break;
+        continue;
         speed -= 1;
       }
     }
@@ -56,6 +57,8 @@ class Player {
                             property: (identifier))))
                       (statement
                         (break_statement))
+                      (statement
+                        (continue_statement))
                       (statement
                         (assignment_statement
                           left: (identifier)

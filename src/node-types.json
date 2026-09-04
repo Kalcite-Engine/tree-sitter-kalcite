@@ -403,6 +403,11 @@
     }
   },
   {
+    "type": "continue_statement",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "field_declaration",
     "named": true,
     "fields": {},
@@ -881,6 +886,10 @@
           "named": true
         },
         {
+          "type": "continue_statement",
+          "named": true
+        },
+        {
           "type": "identifier",
           "named": true
         },
@@ -1211,6 +1220,10 @@
   },
   {
     "type": "const",
+    "named": false
+  },
+  {
+    "type": "continue",
     "named": false
   },
   {
