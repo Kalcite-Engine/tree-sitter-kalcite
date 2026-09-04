@@ -20,5 +20,5 @@ class Settings {
         (block
           (statement
             (call
-              (identifier)))
+              function: (identifier)))
           (statement))))))

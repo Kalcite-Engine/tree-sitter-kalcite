@@ -1,0 +1,59 @@
+==================
+control flow and member calls
+==================
+
+class Player {
+  fn update() {
+    if (Input.held(Key.Left)) {
+      position.x += 1;
+    } else {
+      while speed > 0 {
+        defer Audio.stop();
+        speed -= 1;
+      }
+    }
+  }
+}
+
+---
+
+(source_file
+  (class_declaration
+    name: (identifier)
+    (block
+      (function_declaration
+        name: (identifier)
+        (block
+          (statement
+            (if_statement
+              condition: (parenthesized_expression
+                (call
+                  function: (member_expression
+                    object: (identifier)
+                    property: (identifier))
+                  (member_expression
+                    object: (identifier)
+                    property: (identifier))))
+              consequence: (block
+                (statement
+                  (assignment_statement
+                    left: (member_expression
+                      object: (identifier)
+                      property: (identifier))
+                    right: (number))))
+              alternative: (block
+                (statement
+                  (while_statement
+                    condition: (binary_expression
+                      (identifier)
+                      (number))
+                    body: (block
+                      (statement
+                        (call
+                          function: (member_expression
+                            object: (identifier)
+                            property: (identifier))))
+                      (statement
+                        (assignment_statement
+                          left: (identifier)
+                          right: (number))))))))))))))
