@@ -24,6 +24,7 @@ module.exports = grammar({
       $.if_statement,
       $.while_statement,
       $.break_statement,
+      $.continue_statement,
       seq($._expression, ';'),
       $.block,
       seq('defer', $._expression, ';'),
@@ -39,6 +40,7 @@ module.exports = grammar({
     if_statement: $ => seq('if', field('condition', $._expression), field('consequence', $.block), optional(seq('else', choice($.if_statement, field('alternative', $.block))))),
     while_statement: $ => seq('while', field('condition', $._expression), field('body', $.block)),
     break_statement: _ => seq('break', ';'),
+    continue_statement: _ => seq('continue', ';'),
     assignment_statement: $ => seq(field('left', $._expression), choice('=', '+=', '-=', '*=', '/='), field('right', $._expression), ';'),
     _expression: $ => choice(
       $.identifier,
